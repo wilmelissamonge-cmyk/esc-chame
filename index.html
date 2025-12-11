@@ -210,6 +210,53 @@
         li {
             margin-bottom: 10px;
         }
+
+        /* Media Queries para móviles */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 0 5%;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+                width: 100%;
+            }
+
+            .hero p {
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            h3.section-title {
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+
+            .cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+                margin: auto;
+            }
+
+            .contact-card {
+                width: 90%;
+                padding: 25px;
+            }
+        }
     </style>
 </head>
 
@@ -276,7 +323,7 @@
         </div>
 
         <div class="card" onclick="openModal('habitos')">
-            <img src="https://images.unsplash.com/photo-1525104698733-6f5a09a3d1b0?auto=format&fit=crop&w=600&q=60">
+            <img src="https://images.unsplash.com/photo-1554284126-0c0e1f4d1b25?auto=format&fit=crop&w=600&q=60">
             <h4>Hábitos saludables</h4>
             <p>Pequeños cambios diarios pueden mejorar tu bienestar.</p>
         </div>
@@ -410,7 +457,6 @@
         </p>
     </div>
 </div>
-
 
 <script>
     function openModal(type) {
