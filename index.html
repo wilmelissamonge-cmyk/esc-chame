@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,7 +25,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,16 +35,17 @@
         }
 
         nav h1 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             letter-spacing: 1px;
         }
 
         nav a {
             color: white;
-            margin-left: 25px;
+            margin-left: 20px;
             text-decoration: none;
             font-weight: 500;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -62,28 +64,28 @@
         }
 
         .hero h2 {
-            font-size: 55px;
+            font-size: 45px;
             width: 70%;
             font-weight: 700;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 20px;
+            font-size: 18px;
             margin-top: 15px;
             width: 60%;
         }
 
         .btn {
-            margin-top: 30px;
-            padding: 15px 40px;
+            margin-top: 25px;
+            padding: 12px 35px;
             background: linear-gradient(135deg, #5A8DF2, #889EFF);
             color: white;
             border-radius: 12px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            box-shadow: 0 0 20px rgba(130,150,255,0.7);
+            box-shadow: 0 0 15px rgba(130,150,255,0.7);
             transition: 0.3s;
         }
 
@@ -98,15 +100,15 @@
         }
 
         h3.section-title {
-            font-size: 38px;
-            margin-bottom: 60px;
+            font-size: 36px;
+            margin-bottom: 50px;
             font-weight: 700;
         }
 
         /* CARDS */
         .cards {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -151,13 +153,13 @@
             display: none;
             justify-content: center;
             align-items: center;
-            padding: 30px;
+            padding: 20px;
             z-index: 9999;
         }
 
         .modal {
             background: #1a1a2e;
-            padding: 30px;
+            padding: 25px;
             max-width: 700px;
             max-height: 80vh;
             overflow-y: auto;
@@ -189,17 +191,19 @@
         /* CONTACTO */
         .contact-card {
             background: rgba(255,255,255,0.1);
-            padding: 40px;
+            padding: 35px;
             border-radius: 20px;
-            width: 60%;
+            width: 90%;
+            max-width: 500px;
             margin: auto;
             backdrop-filter: blur(10px);
         }
 
         footer {
-            padding: 30px;
+            padding: 25px;
             background: rgba(0,0,0,0.3);
             text-align: center;
+            font-size: 14px;
         }
 
         ul {
@@ -211,50 +215,43 @@
             margin-bottom: 10px;
         }
 
-        /* Media Queries para móviles */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero {
-                padding: 0 5%;
-            }
-
             .hero h2 {
-                font-size: 32px;
-                width: 100%;
+                font-size: 35px;
+                width: 90%;
             }
 
             .hero p {
                 font-size: 16px;
-                width: 100%;
+                width: 90%;
             }
 
-            .btn {
-                padding: 12px 25px;
-                font-size: 16px;
-            }
-
-            section {
-                padding: 80px 5%;
-            }
-
-            h3.section-title {
-                font-size: 28px;
-                margin-bottom: 40px;
-            }
-
-            .cards {
+            nav {
                 flex-direction: column;
-                gap: 20px;
+                align-items: flex-start;
+            }
+
+            nav div {
+                margin-top: 10px;
             }
 
             .card {
-                width: 100%;
-                max-width: 350px;
-                margin: auto;
+                width: 90%;
             }
 
-            .contact-card {
-                width: 90%;
-                padding: 25px;
+            section {
+                padding: 100px 5%;
+            }
+
+            .modal {
+                max-width: 95%;
+                padding: 20px;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 15px;
             }
         }
     </style>
@@ -283,20 +280,17 @@
 <!-- HABLAR -->
 <section id="hablar" class="fade">
     <h3 class="section-title">Hablar con alguien</h3>
-
     <div class="cards">
         <div class="card" onclick="openModal('joven')">
             <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=600&q=60">
             <h4>Atención Juvenil</h4>
             <p>Apoyo para jóvenes que necesitan ser escuchados.</p>
         </div>
-
         <div class="card" onclick="openModal('chat')">
             <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=60">
             <h4>Chat de Ayuda</h4>
             <p>Habla de forma privada y segura.</p>
         </div>
-
         <div class="card" onclick="openModal('linea')">
             <img src="https://images.unsplash.com/photo-1525186402429-b4ff38bedbec?auto=format&fit=crop&w=600&q=60">
             <h4>Línea Amiga</h4>
@@ -308,20 +302,17 @@
 <!-- RECURSOS -->
 <section id="recursos" class="fade">
     <h3 class="section-title">Recursos útiles</h3>
-
     <div class="cards">
         <div class="card" onclick="openModal('respirar')">
             <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=60">
             <h4>Ejercicios de respiración</h4>
             <p>Calma tu mente y reduce la ansiedad.</p>
         </div>
-
         <div class="card" onclick="openModal('diario')">
             <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=600&q=60">
             <h4>Diario emocional</h4>
             <p>Registra tus pensamientos y emociones para entenderte mejor.</p>
         </div>
-
         <div class="card" onclick="openModal('habitos')">
             <img src="https://images.unsplash.com/photo-1554284126-0c0e1f4d1b25?auto=format&fit=crop&w=600&q=60">
             <h4>Hábitos saludables</h4>
@@ -333,7 +324,6 @@
 <!-- CONTACTO -->
 <section id="contacto" class="fade">
     <h3 class="section-title">Contacto</h3>
-
     <div class="contact-card">
         <h2>¿Necesitas apoyo?</h2>
         <p><strong>📞 Teléfono / WhatsApp:</strong> 57155275</p>
@@ -441,7 +431,7 @@
 <div class="modal-bg" id="modalHabitos">
     <div class="modal">
         <span class="close" onclick="closeModal('habitos')">✖</span>
-        <img src="https://images.unsplash.com/photo-1554284126-0c0e1f4d1b25?auto=format&fit=crop&w=900&q=60">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=900&q=60">
         <h2>Hábitos saludables</h2>
         <p>
             Pequeñas rutinas mejoran tu bienestar general:
@@ -462,7 +452,6 @@
     function openModal(type) {
         document.getElementById("modal" + type.charAt(0).toUpperCase() + type.slice(1)).style.display = "flex";
     }
-
     function closeModal(type) {
         document.getElementById("modal" + type.charAt(0).toUpperCase() + type.slice(1)).style.display = "none";
     }
@@ -470,6 +459,7 @@
 
 </body>
 </html>
+
 
 
 
